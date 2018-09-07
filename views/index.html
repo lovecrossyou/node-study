@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>一个产品</title>
-  <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link href="index.css" rel="stylesheet"></head>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    html {
+      touch-action: manipulation;
+    }
+  </style>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+      }, false);
+    }
+    if(!window.Promise) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+    }
+  </script>
+</head>
 <body>
-  <div id="root"></div>
-<script type="text/javascript" src="index.js"></script></body>
-
+<div id="root"></div>
+<script src="index.js"></script>
+</body>
 </html>
