@@ -1,7 +1,5 @@
 var express = require('express');
-var proxys = require('./src/routes/proxys')
-
-
+// var proxys = require('./src/routes/proxys')
 var app = express();
 
 var ejs = require('ejs');  //我是新引入的ejs插件
@@ -20,7 +18,7 @@ app.get('/', function (req, res) {
     res.render('index')
 });
 
-var server = app.listen(3000, function () {
+var server = app.listen(3001, function () {
     var host = server.address().address;
     var port = server.address().port;
 
