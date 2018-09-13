@@ -14,6 +14,9 @@ app.use(express.static(__dirname + "/public/"));
 
 // app.use('/api', proxys);
 
+
+
+
 app.get('/', function (req, res) {
     res.render('index')
 });
