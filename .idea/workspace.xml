@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0169ab1e-8c89-42ef-a365-fe76691cc2d3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
-      <change beforePath="$PROJECT_DIR$/dist/static/BG_photo_xingzuo@2x.7f2c5600.png" afterPath="$PROJECT_DIR$/views/static/BG_photo_xingzuo@2x.7f2c5600.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/BG_photo_xingzuo@3x.3fca8dcb.png" afterPath="$PROJECT_DIR$/views/static/BG_photo_xingzuo@3x.3fca8dcb.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/bg_icon_shuangyu@2x.860806da.png" afterPath="$PROJECT_DIR$/views/static/bg_icon_shuangyu@2x.860806da.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_baiyang@2x.4cf6a681.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_baiyang@2x.4cf6a681.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_chunv@2x.15584d8e.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_chunv@2x.15584d8e.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_jinniu@2x.380332af.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_jinniu@2x.380332af.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_juxie@2x.69ab5b4a.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_juxie@2x.69ab5b4a.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_mojie@2x.713a2be9.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_mojie@2x.713a2be9.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_sheshou@2x.c4787307.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_sheshou@2x.c4787307.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_shizi@2x.43f69537.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_shizi@2x.43f69537.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_shuangyu@2x.be7cbc3a.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_shuangyu@2x.be7cbc3a.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_shuangzi@2x.3a3243a8.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_shuangzi@2x.3a3243a8.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_shuiping@2x.390dd932.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_shuiping@2x.390dd932.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_tianping@2x.439bf439.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_tianping@2x.439bf439.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_bg_tianxie@2x.b04a62c2.png" afterPath="$PROJECT_DIR$/views/static/icon_bg_tianxie@2x.b04a62c2.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_diamonds_vip.51733f59.png" afterPath="$PROJECT_DIR$/views/static/icon_diamonds_vip.51733f59.png" />
-      <change beforePath="$PROJECT_DIR$/dist/static/icon_goldvip@2x.9366a3e6.png" afterPath="$PROJECT_DIR$/views/static/icon_goldvip@2x.9366a3e6.png" />
-      <change beforePath="$PROJECT_DIR$/dist/umi.css" afterPath="$PROJECT_DIR$/views/umi.css" />
-      <change beforePath="$PROJECT_DIR$/dist/umi.js" afterPath="$PROJECT_DIR$/views/umi.js" />
-    </list>
+    <list default="true" id="0169ab1e-8c89-42ef-a365-fe76691cc2d3" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -41,8 +17,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+            <state relative-caret-position="200">
+              <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -52,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,6 +73,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>dist</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -134,8 +115,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1463" />
-    <option name="y" value="23" />
+    <option name="x" value="1614" />
+    <option name="y" value="27" />
     <option name="width" value="1600" />
     <option name="height" value="877" />
   </component>
@@ -250,12 +231,12 @@
       <workItem from="1540256969636" duration="31000" />
       <workItem from="1540257251820" duration="2543000" />
       <workItem from="1540546537565" duration="3000" />
-      <workItem from="1540865363490" duration="6432000" />
+      <workItem from="1540865363490" duration="7518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60764000" />
+    <option name="totallyTimeSpent" value="61850000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -267,7 +248,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1463" y="23" width="1600" height="877" extended-state="0" />
+    <frame x="1614" y="27" width="1600" height="877" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -276,7 +257,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16212793" sideWeight="0.5290581" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32352942" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33503836" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13679545" sideWeight="0.47094187" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -591,15 +572,15 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        <state relative-caret-position="200">
+          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding />
         </state>
       </provider>
