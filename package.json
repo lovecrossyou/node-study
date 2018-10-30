@@ -12,8 +12,11 @@
     "compression": "^1.7.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "fs": "^0.0.1-security",
     "helmet": "^3.13.0",
     "helmet-csp": "^2.7.1",
-    "http-proxy-middleware": "^0.18.0"
+    "http": "^0.0.0",
+    "http-proxy-middleware": "^0.18.0",
+    "https": "^1.0.0"
   }
 }
