@@ -20,7 +20,7 @@ app.set('views', './dist'); // 指定视图所在的位置
 app.engine('html', ejs.__express);
 app.set('view engine', 'html');
 app.use(express.static(__dirname + "/dist/"));
-app.use('/xitenggamenode', proxys);
+app.use('/xitenggamejar', proxys);
 
 app.get('/', function (req, res) {
     res.render('index')
