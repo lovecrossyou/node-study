@@ -8,10 +8,10 @@ var http = require('http');
 var https = require('https');
 var fs = require('fs')
 
-var options = {
-    key:fs.readFileSync('/home/xituser/xiteng-server/software/ssl/214753937810730.key'),
-    cert:fs.readFileSync('/home/xituser/xiteng-server/software/ssl/214753937810730.pem')
-}
+// var options = {
+//     key:fs.readFileSync('/home/xituser/xiteng-server/software/ssl/214753937810730.key'),
+//     cert:fs.readFileSync('/home/xituser/xiteng-server/software/ssl/214753937810730.pem')
+// }
 
 app.use(compression());
 app.disable('x-powered-by');
@@ -26,9 +26,15 @@ app.get('/', function (req, res) {
     res.render('index')
 });
 
-var server = https.createServer(options,app).listen(9933, function () {
+// var server = https.createServer(options,app).listen(9933, function () {
+//     var host = server.address().address;
+//     var port = server.address().port;
+//     console.log('app listening at http://%s:%s', host, port);
+// });
+
+var server = http.createServer(app).listen(9933, function () {
     var host = server.address().address;
     var port = server.address().port;
-    console.log('Example app listening at http://%s:%s', host, port);
+    console.log('app listening at http://%s:%s', host, port);
 });
 
