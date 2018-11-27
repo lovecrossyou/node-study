@@ -64,7 +64,7 @@ const drawJinLi = (ctx) => {
 const drawQRCode =  (ctx,text,cb)=>{
     const url = 'https://www.xiteng.com:9933/create_qrcode?text=https://www.xiteng.com/xitenggamejar/index?discountGameId=1792&inviteGroupId=1825&inviteId=25242' ;
     loadImage(url).then(qrimg=>{
-        ctx.drawImage(qrimg, 0, 400, 400, 300)
+        ctx.drawImage(qrimg, 0, 400, 300, 300)
         cb();
     });
 
@@ -75,7 +75,6 @@ exports.createShareImg = function (req, res) {
     const canvas = createCanvas(750, 1334);
     const ctx = canvas.getContext('2d')
 
-
     var text = '我再尝试下';
     //字体大小,类型
     ctx.font = '30px 宋体';
@@ -83,7 +82,7 @@ exports.createShareImg = function (req, res) {
     ctx.strokeStyle = 'green';
     //绘制区域,设置空心字体
     ctx.lineWidth = 1;  //设置线条宽度,默认为1px
-    ctx.strokeText(text,100,100);  //(text,x,y);
+    ctx.strokeText(text,100,50);  //(text,x,y);
 
 
 
