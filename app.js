@@ -42,7 +42,7 @@ app.post('/qiniuBaseUrl', controller.qiniu.baseUrl)
 //     console.log('app address', host, port);
 // });
 
-var server = http.createServer(app).listen(9934, function () {
+var server = http.createServer(app).listen(9935, function () {
     var host = server.address().address;
     var port = server.address().port;
     console.log('ranning at port', port);
