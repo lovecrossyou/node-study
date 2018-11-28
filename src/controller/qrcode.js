@@ -44,21 +44,6 @@ const drawText = (ctx, text) => {
     }
 }
 
-// const drawJinLi = (ctx) => {
-//     return new Promise((resolve, reject) => {
-//         fs.readFile(__dirname + '/../assets/fenxiang_xiaocehngxu.png', (err, squid) => {
-//             if (err) throw err
-//             const img = new Image()
-//             img.onload = () => {
-//                 ctx.drawImage(img, 0, 100, 400, 300)
-//                 resolve();
-//             }
-//             img.onerror = err => { throw err }
-//             img.src = squid
-//         })
-//     })
-// }
-
 // 二维码
 const drawQRCode =  (ctx,text,cb)=>{
     const url = 'https://www.xiteng.com:9933/create_qrcode?text=https://www.xiteng.com/xitenggamejar/index?discountGameId=1792&inviteGroupId=1825&inviteId=25242' ;
@@ -79,15 +64,6 @@ exports.createShareImg = function (req, res) {
 
     startDraw(canvas,ctx,res)
 
-    //
-    // //锦鲤
-    // drawJinLi(ctx).then(()=>{
-    //     //二维码
-    //     drawQRCode(ctx,'',()=>{
-    //         const stream = canvas.createPNGStream()
-    //         stream.pipe(res)
-    //     })
-    // })
 }
 
 const startDraw = async (canvas,ctx,res)=> {
