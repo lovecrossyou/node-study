@@ -10,10 +10,10 @@ var fs = require('fs')
 
 var controller = require('./src/controller');
 
-var options = {
-    key: fs.readFileSync('/home/xituser/xiteng-server/software/ssl/214753937810730.key'),
-    cert: fs.readFileSync('/home/xituser/xiteng-server/software/ssl/214753937810730.pem')
-}
+// var options = {
+//     key: fs.readFileSync('/home/xituser/xiteng-server/software/ssl/214753937810730.key'),
+//     cert: fs.readFileSync('/home/xituser/xiteng-server/software/ssl/214753937810730.pem')
+// }
 
 app.use(compression());
 app.disable('x-powered-by');
@@ -35,16 +35,16 @@ app.get('/createShareImg', controller.qrcode.createShareImg);
 //获取七牛baseUrl
 app.post('/qiniuBaseUrl', controller.qiniu.baseUrl)
 
-var server = https.createServer(options, app).listen(9934, function () {
-    var host = server.address().address;
-    var port = server.address().port;
-    console.log('app listening at http://%s%s', host, port);
-    console.log('app address', host, port);
-});
-
-// var server = http.createServer(app).listen(9934, function () {
+// var server = https.createServer(options, app).listen(9934, function () {
 //     var host = server.address().address;
 //     var port = server.address().port;
-//     console.log('ranning at port', port);
+//     console.log('app listening at http://%s%s', host, port);
+//     console.log('app address', host, port);
 // });
+
+var server = http.createServer(app).listen(9934, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log('ranning at port', port);
+});
 
