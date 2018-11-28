@@ -42,6 +42,7 @@ var server = https.createServer(options, app).listen(9934, function () {
     console.log('app address', host, port);
 });
 
+
 // var server = http.createServer(app).listen(9934, function () {
 //     var host = server.address().address;
 //     var port = server.address().port;
