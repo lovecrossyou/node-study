@@ -1,16 +1,17 @@
 const { createCanvas,Image,loadImage,registerFont } = require('canvas')
 const querystring = require('querystring');
 
+
 registerFont(__dirname + '/PINGFANG.TTF', {family: '苹方'});
 
-
+//https://www.xiteng.com/xitenggamenode/createShareImg?discountGameId=1913&inviteId=7&userName=
 const startDraw = async (req,res) => {
 
-    const {name,logo,qrText} = req.query ;
+    const {userName,logo,inviteId,discountGameId} = req.query ;
 
-    const qrTextPretty = (qrText||'').replace(/__/g,'&');
+    const qrTextPretty = 'https://www.xiteng.com/xitenggamenode/create_qrcode?text=https://www.xiteng.com/xitenggamejar/index?discountGameId='+discountGameId+'&inviteId='+inviteId
 
-    const avatarLogo = querystring.parse(qrTextPretty).logo ;
+    const avatarLogo = logo ;
 
 
     console.log('qrTextPretty ',qrTextPretty);
@@ -22,8 +23,8 @@ const startDraw = async (req,res) => {
     ctx.fillStyle = '#fff';
     ctx.fillRect(0,0,570,960);
 
-    if(name){
-        const nameStr = name.split('__')[0]
+    if(userName){
+        const nameStr = userName.split('__')[0]
         drawName(ctx, nameStr||'');
     }
     drawDes(ctx, '亲，一起来免费抽签抢金条吧！', 0);
