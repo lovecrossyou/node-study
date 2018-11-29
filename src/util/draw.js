@@ -11,7 +11,7 @@ const startDraw = async (req,res) => {
 
 
     console.log('qrTextPretty ',qrTextPretty);
-    console.log('qrTextPretty ',qrTextPretty);
+    console.log('logo ',logo);
 
     // 创建画布
     const canvas = createCanvas(570, 940);
