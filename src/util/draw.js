@@ -4,7 +4,7 @@ const startDraw = async (req,res) => {
 
     const {name,logo,qrText} = req.query ;
 
-    const qrTextPretty = qrText.replace(/__/g,'&');
+    const qrTextPretty = (qrText||'').replace(/__/g,'&');
 
     // 创建画布
     const canvas = createCanvas(570, 940);
@@ -13,7 +13,7 @@ const startDraw = async (req,res) => {
     ctx.fillRect(0,0,570,960);
 
 
-    drawName(ctx, name);
+    drawName(ctx, name||'');
     drawDes(ctx, '亲，一起来免费抽签抢金条吧！', 0);
     drawDes(ctx, '下一条锦鲤就是你的', 1);
     await drawJinLi(ctx, '');
