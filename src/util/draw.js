@@ -1,4 +1,5 @@
 const { createCanvas,Image,loadImage,registerFont } = require('canvas')
+const querystring = require('querystring');
 
 registerFont(__dirname + '/PINGFANG.TTF', {family: '苹方'});
 
@@ -9,9 +10,11 @@ const startDraw = async (req,res) => {
 
     const qrTextPretty = (qrText||'').replace(/__/g,'&');
 
+    const avatarLogo = querystring.parse(qrTextPretty).logo ;
+
 
     console.log('qrTextPretty ',qrTextPretty);
-    console.log('logo ',logo);
+    console.log('logo ',avatarLogo);
 
     // 创建画布
     const canvas = createCanvas(570, 940);
@@ -32,8 +35,8 @@ const startDraw = async (req,res) => {
         await drawQR(ctx,qrTextPretty||'');
     }
     await drawZeroImg(ctx, '');
-    if(logo){
-        await drawAvatar(ctx, logo);
+    if(avatarLogo){
+        await drawAvatar(ctx, avatarLogo);
     }
 
     const stream = canvas.createPNGStream()
