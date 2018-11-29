@@ -6,22 +6,30 @@ const startDraw = async (req,res) => {
 
     const qrTextPretty = (qrText||'').replace(/__/g,'&');
 
+
+    console.log('qrTextPretty ',qrTextPretty);
+
     // 创建画布
     const canvas = createCanvas(570, 940);
     const ctx = canvas.getContext('2d')
     ctx.fillStyle = '#fff';
     ctx.fillRect(0,0,570,960);
 
-
-    drawName(ctx, name||'');
+    if(name){
+        drawName(ctx, name||'');
+    }
     drawDes(ctx, '亲，一起来免费抽签抢金条吧！', 0);
     drawDes(ctx, '下一条锦鲤就是你的', 1);
     await drawJinLi(ctx, '');
     drawcodeDes(ctx, '运势来袭，下一条锦鲤就是你的！', 0);
     drawcodeDes(ctx, '长按识别小程序，立即加入抢购', 1);
-    await drawQR(ctx,qrTextPretty);
+    if(qrTextPretty){
+        await drawQR(ctx,qrTextPretty||'');
+    }
     await drawZeroImg(ctx, '');
-    await drawAvatar(ctx, logo);
+    if(logo){
+        await drawAvatar(ctx, logo);
+    }
 
     const stream = canvas.createPNGStream()
     stream.pipe(res)
