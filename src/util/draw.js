@@ -1,4 +1,7 @@
-const { createCanvas,Image,loadImage } = require('canvas')
+const { createCanvas,Image,loadImage,registerFont } = require('canvas')
+
+registerFont(__dirname + '/PINGFANG.TTF', {family: '苹方'});
+
 
 const startDraw = async (req,res) => {
 
@@ -49,7 +52,7 @@ const drawName = (ctx, name) => {
     //字体大小,类型
     ctx.fillStyle = "#333333";
     // ctx.textAlign='center'
-    ctx.font = "24px ";
+    ctx.font = "24px 苹方";
     ctx.fillText(text, (570 - ctx.measureText(text).width) / 2, 140);
 }
 
@@ -58,7 +61,7 @@ const drawDes = (ctx, des, index) => {
     var text = des;
     //字体大小,类型
     ctx.fillStyle = "#333333";
-    ctx.font = "26px ";
+    ctx.font = "26px 苹方";
     ctx.fillText(text, (570 - ctx.measureText(text).width) / 2, 190 + 30 * index);
 
 }
@@ -74,7 +77,7 @@ const drawcodeDes = (ctx, des, index) => {
     var text = des;
     //字体大小,类型
     ctx.fillStyle = "#e6454a";
-    ctx.font = "24px ";
+    ctx.font = "24px 苹方";
     ctx.fillText(text, (570 - 480) / 2, 770 + 28 * index)
 
 }
