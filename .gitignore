@@ -18,5 +18,5 @@
 .umi-production
 .idea
 .idea/workspace.xml
-
+node_modules
 
