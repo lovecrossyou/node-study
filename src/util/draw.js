@@ -1,10 +1,21 @@
-const { createCanvas,Image,loadImage } = require('canvas')
+const { createCanvas,Image,loadImage,registerFont } = require('canvas')
+const querystring = require('querystring');
 
+
+registerFont(__dirname + '/PINGFANG.TTF', {family: '苹方'});
+
+//https://www.xiteng.com/xitenggamenode/createShareImg?discountGameId=1913&inviteId=7&userName=
 const startDraw = async (req,res) => {
 
-    const {name,logo,qrText} = req.query ;
+    const {userName,logo,inviteId,discountGameId} = req.query ;
 
-    const qrTextPretty = qrText.replace(/__/g,'&');
+    const qrTextPretty = 'https://www.xiteng.com/xitenggamenode/create_qrcode?text=https://www.xiteng.com/xitenggamejar/index?discountGameId='+discountGameId+'&inviteId='+inviteId
+
+    const avatarLogo = logo ;
+
+
+    console.log('qrTextPretty ',qrTextPretty);
+    console.log('logo ',avatarLogo);
 
     // 创建画布
     const canvas = createCanvas(570, 940);
@@ -12,16 +23,22 @@ const startDraw = async (req,res) => {
     ctx.fillStyle = '#fff';
     ctx.fillRect(0,0,570,960);
 
-
-    drawName(ctx, name);
+    if(userName){
+        const nameStr = userName.split('__')[0]
+        drawName(ctx, nameStr||'');
+    }
     drawDes(ctx, '亲，一起来免费抽签抢金条吧！', 0);
     drawDes(ctx, '下一条锦鲤就是你的', 1);
     await drawJinLi(ctx, '');
     drawcodeDes(ctx, '运势来袭，下一条锦鲤就是你的！', 0);
     drawcodeDes(ctx, '长按识别小程序，立即加入抢购', 1);
-    await drawQR(ctx,qrTextPretty);
+    if(qrTextPretty){
+        await drawQR(ctx,qrTextPretty||'');
+    }
     await drawZeroImg(ctx, '');
-    await drawAvatar(ctx, logo);
+    if(avatarLogo){
+        await drawAvatar(ctx, avatarLogo);
+    }
 
     const stream = canvas.createPNGStream()
     stream.pipe(res)
@@ -41,7 +58,7 @@ const drawName = (ctx, name) => {
     //字体大小,类型
     ctx.fillStyle = "#333333";
     // ctx.textAlign='center'
-    ctx.font = "24px PingFangSC-Regular";
+    ctx.font = "24px 苹方";
     ctx.fillText(text, (570 - ctx.measureText(text).width) / 2, 140);
 }
 
@@ -50,7 +67,7 @@ const drawDes = (ctx, des, index) => {
     var text = des;
     //字体大小,类型
     ctx.fillStyle = "#333333";
-    ctx.font = "26px PingFangSC-Regular";
+    ctx.font = "26px 苹方";
     ctx.fillText(text, (570 - ctx.measureText(text).width) / 2, 190 + 30 * index);
 
 }
@@ -66,7 +83,7 @@ const drawcodeDes = (ctx, des, index) => {
     var text = des;
     //字体大小,类型
     ctx.fillStyle = "#e6454a";
-    ctx.font = "24px PingFangSC-Regular";
+    ctx.font = "24px 苹方";
     ctx.fillText(text, (570 - 480) / 2, 770 + 28 * index)
 
 }
