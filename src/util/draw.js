@@ -1,12 +1,15 @@
 const { createCanvas,Image,loadImage,registerFont } = require('canvas')
+<<<<<<< HEAD
 const querystring = require('querystring');
 const width_canvas = 670;
 const height_canvas = 940;
 var desHeight = 100;
+=======
+
+>>>>>>> ddeea3833c550222914c97de0e3e6b3c5c7702a2
 
 registerFont(__dirname + '/PINGFANG.TTF', {family: '苹方'});
 
-//https://www.xiteng.com/xitenggamenode/createShareImg?discountGameId=1913&inviteId=7&userName=
 const startDraw = async (req,res) => {
 
     const {userName,logo,inviteId,discountGameId,des} = req.query ;
@@ -14,10 +17,6 @@ const startDraw = async (req,res) => {
     const qrTextPretty = 'https://www.xiteng.com/xitenggamenode/create_qrcode?text=https://www.xiteng.com/xitenggamejar/index?discountGameId='+discountGameId+'&inviteId='+inviteId
 
     const avatarLogo = logo ;
-
-
-    console.log('qrTextPretty ',qrTextPretty);
-    console.log('logo ',avatarLogo);
 
     // 创建画布
     const canvas = createCanvas(width_canvas, height_canvas);
@@ -41,9 +40,14 @@ const startDraw = async (req,res) => {
         await drawQR(ctx,qrTextPretty||'');
     }
     await drawZeroImg(ctx, '');
+<<<<<<< HEAD
     if(avatarLogo){
         await drawAvatar(ctx,avatarLogo);
     }
+=======
+    await drawAvatar(ctx, avatarLogo);
+
+>>>>>>> ddeea3833c550222914c97de0e3e6b3c5c7702a2
 
     const stream = canvas.createPNGStream()
     stream.pipe(res)
@@ -53,10 +57,17 @@ const DrawImage = async (ctx,path,react)=>{
     ctx.drawImage(myimg, react.x, react.y, react.w, react.h);
 }
 const drawAvatar = async (ctx, icon) => {
+<<<<<<< HEAD
     const myimg = await loadImage(icon);
     ctx.beginPath();
     ctx.arc(width_canvas / 2, 65, 35, 0, 2 * Math.PI);
     ctx.closePath();
+=======
+    // const myimg = await loadImage(icon);
+    const avatar = __dirname + '/../assets/logo_xiteng.png'
+    const myimg = await loadImage(avatar);
+    ctx.arc(570 / 2, 65, 35, 0, 2 * Math.PI);
+>>>>>>> ddeea3833c550222914c97de0e3e6b3c5c7702a2
     ctx.clip();
     ctx.drawImage(myimg, width_canvas / 2 - 35, 30, 70, 70);
     ctx.restore()
