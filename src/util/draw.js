@@ -48,9 +48,9 @@ const DrawImage = async (ctx,path,react)=>{
     ctx.drawImage(myimg, react.x, react.y, react.w, react.h);
 }
 const drawAvatar = async (ctx, icon) => {
-
-    const icon = __dirname + '/../assets/logo_xiteng.png'
-    const myimg = await loadImage(icon);
+    // await loadImage(path);
+    const icon_xt = __dirname + '/../assets/logo_xiteng.png'
+    const myimg = await loadImage(icon_xt);
 
 
 
