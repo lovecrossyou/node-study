@@ -35,7 +35,7 @@ app.use('/xitenggamenode',routers)
 // });
 
 
-var server = http.createServer(app).listen(9935, function () {
+var server = http.createServer(app).listen(9934, function () {
     var host = server.address().address;
     var port = server.address().port;
     console.log('ranning at host', host);
