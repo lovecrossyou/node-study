@@ -1,6 +1,5 @@
 const { createCanvas,Image,loadImage,registerFont } = require('canvas')
-// const width_canvas = 670;
-const width_canvas = 570;
+const width_canvas = 670;
 const height_canvas = 940;
 var desHeight = 100;
 
@@ -18,7 +17,7 @@ const startDraw = async (req,res) => {
     const canvas = createCanvas(width_canvas, height_canvas);
     const ctx = canvas.getContext('2d')
     await DrawImage(ctx,__dirname + '/../assets/share/bg_photo_yaoqing1.png',{x:0,y:0,w:width_canvas,h:height_canvas})
-    drawRoundRect(ctx, (width_canvas-596)/2, 56, 550, 810, 10);
+    drawRoundRect(ctx, (width_canvas-596)/2, 56, 596, 810, 10);
 
     if(userName){
         const nameStr = userName.split('__')[0]
