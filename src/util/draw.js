@@ -1,5 +1,6 @@
 const { createCanvas,Image,loadImage,registerFont } = require('canvas')
-const width_canvas = 670;
+// const width_canvas = 670;
+const width_canvas = 570;
 const height_canvas = 940;
 var desHeight = 100;
 
