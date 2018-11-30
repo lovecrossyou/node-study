@@ -1,10 +1,8 @@
 const { createCanvas,Image,loadImage,registerFont } = require('canvas')
-const querystring = require('querystring');
 
 
 registerFont(__dirname + '/PINGFANG.TTF', {family: '苹方'});
 
-//https://www.xiteng.com/xitenggamenode/createShareImg?discountGameId=1913&inviteId=7&userName=
 const startDraw = async (req,res) => {
 
     const {userName,logo,inviteId,discountGameId} = req.query ;
@@ -12,10 +10,6 @@ const startDraw = async (req,res) => {
     const qrTextPretty = 'https://www.xiteng.com/xitenggamenode/create_qrcode?text=https://www.xiteng.com/xitenggamejar/index?discountGameId='+discountGameId+'&inviteId='+inviteId
 
     const avatarLogo = logo ;
-
-
-    console.log('qrTextPretty ',qrTextPretty);
-    console.log('logo ',avatarLogo);
 
     // 创建画布
     const canvas = createCanvas(570, 940);
@@ -36,16 +30,17 @@ const startDraw = async (req,res) => {
         await drawQR(ctx,qrTextPretty||'');
     }
     await drawZeroImg(ctx, '');
-    if(avatarLogo){
-        await drawAvatar(ctx, avatarLogo);
-    }
+    await drawAvatar(ctx, avatarLogo);
+
 
     const stream = canvas.createPNGStream()
     stream.pipe(res)
 }
 
 const drawAvatar = async (ctx, icon) => {
-    const myimg = await loadImage(icon);
+    // const myimg = await loadImage(icon);
+    const avatar = __dirname + '/../assets/logo_xiteng.png'
+    const myimg = await loadImage(avatar);
     ctx.arc(570 / 2, 65, 35, 0, 2 * Math.PI);
     ctx.clip();
     ctx.drawImage(myimg, 570 / 2 - 35, 30, 70, 70);
