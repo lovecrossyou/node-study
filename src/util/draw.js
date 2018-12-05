@@ -48,7 +48,9 @@ const DrawImage = async (ctx,path,react)=>{
     ctx.drawImage(myimg, react.x, react.y, react.w, react.h);
 }
 const drawAvatar = async (ctx, icon) => {
-    const myimg = await loadImage(icon);
+    // await loadImage(path);
+    const icon_xt = __dirname + '/../assets/logo_xiteng.png'
+    const myimg = await loadImage(icon_xt);
     ctx.beginPath();
     ctx.arc(width_canvas / 2, 65, 35, 0, 2 * Math.PI);
     ctx.closePath();
