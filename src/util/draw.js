@@ -41,6 +41,7 @@ const startDraw = async (req,res) => {
     await drawAvatar(ctx, avatarLogo);
 
     const stream = canvas.createPNGStream()
+    res.writeHead(200, {'Content-Type': 'image/png'});
     stream.pipe(res)
 }
 const DrawImage = async (ctx,path,react)=>{
