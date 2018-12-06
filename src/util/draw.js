@@ -17,9 +17,6 @@ const startDraw = async (req,res) => {
 
     const avatarLogo = logo ;
 
-
-
-
     // 创建画布
     const canvas = createCanvas(width_canvas, height_canvas);
     const ctx = canvas.getContext('2d')
