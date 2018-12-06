@@ -34,9 +34,8 @@ const startDraw = async (req,res) => {
     if (des){
        let desObj =  queryString.parse(des);
        let desString = Object.keys(desObj)[0] ;
-        desStr = queryString.parse(desString)
         // 去除空格  和 回车换行
-        desStr = desStr.replace(/\ +/g,"").replace(/[\r\n]/g,"");
+        desStr = desString.replace(/\ +/g,"").replace(/[\r\n]/g,"");
     }
     drawDes(ctx, desStr, 0);
     await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.png',{x:(width_canvas-504)/2,y:190+desHeight+30,w:504,h:416})
