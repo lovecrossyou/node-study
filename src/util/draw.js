@@ -26,6 +26,8 @@ const startDraw = async (req,res) => {
     let desStr = '亲，一起来免费抽签抢金条吧！下一条锦鲤就是你!!!'
     if (des){
         desStr = des.split('__')[0]
+        // 去除空格  和 回车换行
+        desStr = desStr.replace(/\ +/g,"").replace(/[\r\n]/g,"");
     }
     drawDes(ctx, desStr, 0);
     await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.png',{x:(width_canvas-504)/2,y:190+desHeight+30,w:504,h:416})
