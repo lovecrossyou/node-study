@@ -1,4 +1,8 @@
 const { createCanvas,Image,loadImage,registerFont } = require('canvas')
+
+const queryString = require('querystring') ;
+
+
 const width_canvas = 670;
 const height_canvas = 940;
 var desHeight = 100;
@@ -25,7 +29,7 @@ const startDraw = async (req,res) => {
     }
     let desStr = '亲，一起来免费抽签抢金条吧！下一条锦鲤就是你!!!'
     if (des){
-        desStr = des.split('__')[0]
+        desStr = queryString.parse(des).split('__')[0]
         // 去除空格  和 回车换行
         desStr = desStr.replace(/\ +/g,"").replace(/[\r\n]/g,"");
     }
