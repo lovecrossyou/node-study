@@ -17,6 +17,9 @@ const startDraw = async (req,res) => {
 
     const avatarLogo = logo ;
 
+
+
+
     // 创建画布
     const canvas = createCanvas(width_canvas, height_canvas);
     const ctx = canvas.getContext('2d')
@@ -29,7 +32,9 @@ const startDraw = async (req,res) => {
     }
     let desStr = '亲，一起来免费抽签抢金条吧！下一条锦鲤就是你!!!'
     if (des){
-        desStr = queryString.parse(des)
+       let desObj =  queryString.parse(des);
+       let desString = Object.keys(desObj)[0] ;
+        desStr = queryString.parse(desString)
         // 去除空格  和 回车换行
         desStr = desStr.replace(/\ +/g,"").replace(/[\r\n]/g,"");
     }
