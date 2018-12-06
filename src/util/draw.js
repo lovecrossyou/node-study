@@ -29,7 +29,7 @@ const startDraw = async (req,res) => {
     }
     let desStr = '亲，一起来免费抽签抢金条吧！下一条锦鲤就是你!!!'
     if (des){
-        desStr = queryString.parse(des).split('__')[0]
+        desStr = queryString.parse(des)
         // 去除空格  和 回车换行
         desStr = desStr.replace(/\ +/g,"").replace(/[\r\n]/g,"");
     }
