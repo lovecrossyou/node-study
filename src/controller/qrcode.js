@@ -5,9 +5,18 @@ const path = require('path')
 const fs = require('fs')
 const {startDraw} = require('../util/draw')
 
+
 // 生成二维码
 exports.create_qrcode = function (req, res) {
     const params = req.query;
+
+    let dark = '#e6454aff' ;
+    let light = '#ffffffff' ;
+    let dark_light_color = req.query.color ;
+    if(dark_light_color!==undefined){
+        dark = dark_light_color.split('_')[0] ;
+        light = dark_light_color.split('_')[1] ;
+    }
     let text = '';
     Object.keys(params).forEach(function (key) {
         if (text === '') {
@@ -20,8 +29,8 @@ exports.create_qrcode = function (req, res) {
     try {
 
         QRCode.toDataURL(text, { errorCorrectionLevel: 'H' ,scale:1, width:200, color: {
-                dark: '#e6454aff',  // Blue dots
-                light: '#ffffffff' // Transparent background
+                dark: dark,  // dots color
+                light: light // Transparent background
             }},function (err, url) {
             const img = new Image()
             img.onload = () =>{
@@ -34,8 +43,6 @@ exports.create_qrcode = function (req, res) {
 
                 const stream = canvas.createPNGStream()
                 stream.pipe(res)
-                // res.writeHead(200, {'Content-Type': 'image/png'});
-                // img.pipe(res);
             }
             img.onerror = err => { throw err }
             img.src = url;
