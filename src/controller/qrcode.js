@@ -14,8 +14,8 @@ exports.create_qrcode = function (req, res) {
     let light = '#ffffffff' ;
     let dark_light_color = req.query.color ;
     if(dark_light_color!==undefined){
-        dark = dark_light_color.split('_')[0] ;
-        light = dark_light_color.split('_')[1] ;
+        dark = '#'+dark_light_color.split('_')[0] ;
+        light = '#'+dark_light_color.split('_')[1] ;
     }
     let text = '';
     Object.keys(params).forEach(function (key) {
