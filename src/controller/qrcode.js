@@ -22,6 +22,9 @@ exports.create_qrcode = function (req, res) {
         if (text === '') {
             text = params[key];
         }
+        else if(key==='color'){
+
+        }
         else {
             text += '&' + key + '=' + params[key];
         }
