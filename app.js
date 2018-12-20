@@ -16,11 +16,8 @@ app.set('views', './views'); // 指定视图所在的位置
 app.engine('html', ejs.__express);
 app.set('view engine', 'html');
 app.use('/xitenggamenode', express.static(__dirname + "/views/"));
-
 app.use('/xitenggamejar', proxys);
-
 app.use('/xitenggamenode',routers)
-
 
 var server = http.createServer(app).listen(9934, function () {
     var host = server.address().address;
