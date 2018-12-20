@@ -4,8 +4,6 @@ var compression = require('compression');
 var app = express();
 var proxys = require('./src/proxy/proxys')
 var http = require('http');
-var https = require('https');
-var fs = require('fs')
 var routers = require('./src/router')
 
 app.use(compression());
