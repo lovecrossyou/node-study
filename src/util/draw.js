@@ -11,10 +11,12 @@ registerFont(__dirname + '/PINGFANG.TTF', {family: '苹方'});
 
 const startDraw = async (req,res) => {
 
-    const {userName,logo,inviteId,discountGameId,des} = req.query ;
+    const {userName,logo,inviteId,discountGameId,des,download} = req.query ;
 
-    const qrTextPretty = 'https://www.xiteng.com/xitenggamenode/create_qrcode?text=https://www.xiteng.com/xitenggamejar/index?discountGameId='+discountGameId+'&inviteId='+inviteId
-
+    let qrTextPretty = 'https://www.xiteng.com/xitenggamenode/create_qrcode?text=https://www.xiteng.com/xitenggamejar/index?discountGameId='+discountGameId+'&inviteId='+inviteId
+    if(download!==undefined){
+        qrTextPretty = '' ;
+    }
     const avatarLogo = logo ;
 
     // 创建画布
@@ -73,7 +75,7 @@ const drawName = (ctx, name) => {
     //字体大小,类型
     ctx.fillStyle = "#333333";
     // ctx.textAlign='center'
-    ctx.font = "24px 苹方";
+    ctx.font = '24px "苹方"';
     ctx.fillText(text, (width_canvas - ctx.measureText(text).width) / 2, 140);
 }
 
