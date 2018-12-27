@@ -26,7 +26,7 @@ const startDraw = async (req,res) => {
     drawRoundRect(ctx, (width_canvas-596)/2, 56, 596, 810, 10);
 
     if(userName){
-        const nameStr = userName.split('__')[0]
+        const nameStr = new String(userName.split('__')[0]);
         drawName(ctx, nameStr||'');
     }
     let desStr = '亲，一起来免费抽签抢金条吧！下一条锦鲤就是你!!!'
