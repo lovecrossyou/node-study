@@ -26,16 +26,16 @@ const startDraw = async (req,res) => {
     drawRoundRect(ctx, (width_canvas-596)/2, 56, 596, 810, 10);
 
     if(userName){
-        const nameStr = new String(userName.split('__')[0]);
+        const nameStr = userName.replace(/\ +/g,"").replace(/[\r\n]/g,"");
         drawName(ctx, nameStr||'');
     }
     let desStr = '亲，一起来免费抽签抢金条吧！下一条锦鲤就是你!!!'
-    if (des){
-       let desObj =  queryString.parse(des);
-       let desString = Object.keys(desObj)[0] ;
-        // 去除空格  和 回车换行
-        desStr = desString.replace(/\ +/g,"").replace(/[\r\n]/g,"");
-    }
+    // if (des){
+    //    let desObj =  queryString.parse(des);
+    //    let desString = Object.keys(desObj)[0] ;
+    //     // 去除空格  和 回车换行
+    //     desStr = desString.replace(/\ +/g,"").replace(/[\r\n]/g,"");
+    // }
     drawDes(ctx, desStr, 0);
     await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.png',{x:(width_canvas-504)/2,y:190+desHeight+30,w:504,h:416})
     drawcodeDes(ctx, '运势来袭，下一条锦鲤就是你的！', 0);
