@@ -1,5 +1,5 @@
 const { createCanvas,Image,loadImage,registerFont } = require('canvas')
-
+const BASE64  = require('./base64')
 const queryString = require('querystring') ;
 
 
@@ -26,7 +26,7 @@ const startDraw = async (req,res) => {
     drawRoundRect(ctx, (width_canvas-596)/2, 56, 596, 810, 10);
 
     if(userName){
-        const nameStr = userName.replace(/\ +/g,"").replace(/[\r\n]/g,"");
+        let nameStr = BASE64.decode(userName).replace(/\ +/g,"").replace(/[\r\n]/g,"");
         drawName(ctx, nameStr||'');
     }
     let desStr = '亲，一起来免费抽签抢金条吧！下一条锦鲤就是你!!!'
