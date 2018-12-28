@@ -37,7 +37,7 @@ const startDraw = async (req,res) => {
     //     desStr = desString.replace(/\ +/g,"").replace(/[\r\n]/g,"");
     // }
     drawDes(ctx, desStr, 0);
-    await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.png',{x:(width_canvas-504)/2,y:190+desHeight+30,w:504,h:416})
+    await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.jpg',{x:(width_canvas-504)/2,y:190+desHeight+30,w:504,h:416})
     drawcodeDes(ctx, '运势来袭，下一条锦鲤就是你的！', 0);
     drawcodeDes(ctx, '长按识别小程序，立即加入抢购', 1);
     if(qrTextPretty){
