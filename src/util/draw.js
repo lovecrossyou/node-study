@@ -29,7 +29,7 @@ const startDraw = async (req,res) => {
         let nameStr = BASE64.decode(userName).replace(/\ +/g,"").replace(/[\r\n]/g,"");
         drawName(ctx, nameStr||'');
     }
-    let desStr = '亲，一起来免费抽签抢金条吧！下一条锦鲤就是你的!'
+    let desStr = '猪年大吉，金猪送福，免费抽签送黄金100g，立即领取！'
     // if (des){
     //    let desObj =  queryString.parse(des);
     //    let desString = Object.keys(desObj)[0] ;
@@ -38,7 +38,7 @@ const startDraw = async (req,res) => {
     // }
     drawDes(ctx, desStr, 0);
     await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.jpg',{x:(width_canvas-504)/2,y:190+desHeight+30,w:504,h:416})
-    drawcodeDes(ctx, '运势来袭，下一条锦鲤就是你的！', 0);
+    drawcodeDes(ctx, '新年运势来袭，黄金100g属于你！', 0);
     drawcodeDes(ctx, '长按识别小程序，立即加入抢购', 1);
     if(qrTextPretty){
         await drawQR(ctx,qrTextPretty||'');

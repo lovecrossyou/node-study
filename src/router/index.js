@@ -12,5 +12,8 @@ router.get('/createShareImg', controller.qrcode.createShareImg);
 //获取七牛baseUrl
 router.post('/qiniuBaseUrl', controller.qiniu.baseUrl);
 
+// 分享相关
+router.get('/shareImage', controller.shareInfo.shareImage);
+router.post('/shareContent', controller.shareInfo.shareContent);
 
 module.exports = router ;
