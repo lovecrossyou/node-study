@@ -18,9 +18,15 @@ exports.create_qrcode = function (req, res) {
         light = '#'+dark_light_color.split('_')[1] ;
     }
     let text = '';
+    console.log('params--------'+Object.keys(params));
     Object.keys(params).forEach(function (key) {
+
+
         if (text === '') {
             text = params[key];
+            if (text.includes('androuter')){
+               text= text.replace('androuter','#');
+            }
         }
         else if(key==='color'){
 
@@ -50,7 +56,7 @@ exports.create_qrcode = function (req, res) {
             img.onerror = err => { throw err }
             img.src = url;
 
-            console.log('thj+======',url)
+            // console.log('thj+======',url)
             // var img = qr.image(text, {size: 10});
 
 
