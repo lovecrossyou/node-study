@@ -24,9 +24,6 @@ exports.create_qrcode = function (req, res) {
 
         if (text === '') {
             text = params[key];
-            if (text.includes('androuter')){
-               text= text.replace('androuter','#');
-            }
         }
         else if(key==='color'){
 
