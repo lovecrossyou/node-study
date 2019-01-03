@@ -15,7 +15,7 @@ const startDraw = async (req,res) => {
 
     let qrTextPretty = 'https://www.xiteng.com/xitenggamenode/create_qrcode?text=https://www.xiteng.com/xitenggamejar/index?discountGameId='+discountGameId+'&inviteId='+inviteId
     if(download!==undefined){
-        qrTextPretty = '' ;
+        qrTextPretty = 'https://www.xiteng.com/xitenggamenode/#/buyingspree/page' ;
     }
     const avatarLogo = logo ;
 
