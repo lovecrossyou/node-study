@@ -3,8 +3,8 @@ const BASE64  = require('./base64')
 const queryString = require('querystring') ;
 
 
-const width_canvas = 670;
-const height_canvas = 940;
+const width_canvas = 668;
+const height_canvas = 956;
 var desHeight = 100;
 
 registerFont(__dirname + '/PINGFANG.TTF', {family: '苹方'});
@@ -23,7 +23,7 @@ const startDraw = async (req,res) => {
     const canvas = createCanvas(width_canvas, height_canvas);
     const ctx = canvas.getContext('2d')
     await DrawImage(ctx,__dirname + '/../assets/share/bg_photo_yaoqing1.png',{x:0,y:0,w:width_canvas,h:height_canvas})
-    drawRoundRect(ctx, (width_canvas-596)/2, 56, 596, 810, 10);
+// drawRoundRect(ctx, (width_canvas-596)/2, 56, 596, 810, 10);
 
     if(userName){
         let nameStr = BASE64.decode(userName).replace(/\ +/g,"").replace(/[\r\n]/g,"");
@@ -37,7 +37,7 @@ const startDraw = async (req,res) => {
     //     desStr = desString.replace(/\ +/g,"").replace(/[\r\n]/g,"");
     // }
     drawDes(ctx, desStr, 0);
-    await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.png',{x:(width_canvas-504)/2,y:190+desHeight+30,w:504,h:416})
+    await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.png',{x:(width_canvas-504)/2,y:190+desHeight+30,w:504,h:397})
     drawcodeDes(ctx, '新年运势来袭，黄金100g属于你！', 0);
     drawcodeDes(ctx, '长按识别小程序，立即加入抢购', 1);
     if(qrTextPretty){
@@ -116,15 +116,15 @@ const drawcodeDes = (ctx, des, index) => {
     //字体大小,类型
     ctx.fillStyle = "#e6454a";
     ctx.font = "24px 苹方";
-    ctx.fillText(text, (width_canvas - 480) / 2, 770 + 28 * index)
+    ctx.fillText(text, (width_canvas - 480) / 2, 760 + 28 * index)
 }
 const drawQR = async (ctx, qrText) => {
-    await DrawImage(ctx,qrText,{x:460,y:715,w:125,h:125})
+    await DrawImage(ctx,qrText,{x:460,y:705,w:125,h:125})
     await DrawImage(ctx,__dirname + '/../assets/share/logo_fenxiang_qianggou.png',{x:460+(125-35)/2,y:715+(125-35)/2,w:35,h:35})
 }
 
 const drawZeroImg = async (ctx, jinli) => {
-    await DrawImage(ctx,__dirname + '/../assets/share/logo_fenxiang_qianggou1.png',{x:(width_canvas - 155) / 2,y:890,w:155,h:35})
+    await DrawImage(ctx,__dirname + '/../assets/share/logo_fenxiang_qianggou1.png',{x:(width_canvas - 159) / 2,y:865,w:159,h:43})
 }
 const drawRoundRect =(cxt, x, y, width, height, radius)=>{
 
