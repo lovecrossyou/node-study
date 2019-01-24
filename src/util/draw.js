@@ -29,7 +29,7 @@ const startDraw = async (req,res) => {
         let nameStr = BASE64.decode(userName).replace(/\ +/g,"").replace(/[\r\n]/g,"");
         drawName(ctx, nameStr||'');
     }
-    let desStr = '猪年大吉，金猪送福，免费抽签送黄金100g，立即领取！'
+    let desStr = '猪年大吉，金猪送福，一起来抽签抢金条吧！完全免费，祝你好运！'
     // if (des){
     //    let desObj =  queryString.parse(des);
     //    let desString = Object.keys(desObj)[0] ;
