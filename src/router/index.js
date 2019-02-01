@@ -16,4 +16,7 @@ router.post('/qiniuBaseUrl', controller.qiniu.baseUrl);
 router.get('/shareImage', controller.shareInfo.shareImage);
 router.post('/shareContent', controller.shareInfo.shareContent);
 
+// 获取活动信息
+router.get('/activityInfo',controller.activity.activityInfo)
+
 module.exports = router ;
