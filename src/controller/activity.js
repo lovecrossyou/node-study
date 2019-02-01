@@ -9,29 +9,31 @@
 exports.activityInfo = function (req, res) {
     const info =  {
         "invite_group": {
-            "picture": "",
-            "text": ""
+            "picture": "http://qnimage.xiteng.com/invite_link@2x.png",
+            "text": "猪年大吉，金猪送福，抽签抢苹果电脑，抽中即送，祝你好运！"
         },
         "me_invite_friend": {
-            "input_text": "",
-            "picture": "http://qnimage.xiteng.com/me_invite_friend@2x%20.png",
+            "input_text": "猪年大吉，金猪送福，抽签抢苹果笔记本电脑，抽中即送，公开透明，祝你好运！",
+            "picture": "http://qnimage.xiteng.com/me_invite_friend@2x.png",
             "invite_link": {
-                "picture": "",
-                "text": ""
+                "picture": "http://qnimage.xiteng.com/invite_link@2x.png",
+                "text": "猪年大吉，金猪送福，抽签抢苹果电脑，抽中即送，祝你好运！"
             },
             "invite_info": {
-                "picture": "",
-                "text": ""
+                "picture": "http://qnimage.xiteng.com/invite_picture@2x.png",
+                "text": "猪年大吉，金猪送福，抽签抢苹果笔记本电脑，抽中即送，公开透明，祝你好运！"
             }
         },
         "rule": {
             "zero_picture": "",
-            "common_picture": ""
+            "common_picture": "",
+            
         },
         "awards": {
-            "picture": ""
+            "picture": "",
+            
         },
-        "home_activity_big_picture": ""
+        "home_activity_big_picture": "http://qnimage.xiteng.com/%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%A6%96%E9%A1%B5.jpg"
     }
 
     res.send(info);
