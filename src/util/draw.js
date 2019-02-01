@@ -38,7 +38,7 @@ const startDraw = async (req,res) => {
     //     desStr = desString.replace(/\ +/g,"").replace(/[\r\n]/g,"");
     // }
     drawDes(ctx, desStr, 0);
-    await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.jpg',{x:(width_canvas-520)/2,y:200+desHeight+30,w:520,h:400})
+    await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.png',{x:(width_canvas-520)/2,y:200+desHeight+30,w:520,h:400})
     drawcodeDes(ctx, '新年运势来袭，免费参与抽签抢购！', 0);
     drawcodeDes(ctx, '长按识别小程序，立即加入抢购！', 1);
     if(qrTextPretty){
