@@ -9,32 +9,30 @@
 exports.activityInfo = function (req, res) {
     const info =  {
         "invite_group": {
-            "picture": "http://qnimage.xiteng.com/invite_link@2x.png",
-            "text": "猪年大吉，金猪送福，抽签抢苹果电脑，抽中即送，祝你好运！"
+          "picture": "http://qnimage.xiteng.com/invite_link@2x.png",
+          "text": "猪年大吉，金猪送福，抽签抢苹果电脑，抽中即送，祝你好运！"
         },
         "me_invite_friend": {
-            "input_text": "猪年大吉，金猪送福，抽签抢苹果笔记本电脑，抽中即送，公开透明，祝你好运！",
-            "picture": "http://qnimage.xiteng.com/me_invite_friend@2x.png",
-            "invite_link": {
-                "picture": "http://qnimage.xiteng.com/invite_link@2x.png",
-                "text": "猪年大吉，金猪送福，抽签抢苹果电脑，抽中即送，祝你好运！"
-            },
-            "invite_info": {
-                "picture": "http://qnimage.xiteng.com/invite_picture@2x.png",
-                "text": "猪年大吉，金猪送福，抽签抢苹果笔记本电脑，抽中即送，公开透明，祝你好运！"
-            }
+          "input_text": "猪年大吉，金猪送福，抽签抢苹果笔记本电脑，抽中即送，公开透明，祝你好运！",
+          "picture": "http://qnimage.xiteng.com/me_invite_friend@2x.png",
+          "invite_link": {
+            "picture": "http://qnimage.xiteng.com/invite_link@2x.png",
+            "text": "猪年大吉，金猪送福，抽签抢苹果电脑，抽中即送，祝你好运！"
+          },
+          "invite_info": {
+            "picture": "http://qnimage.xiteng.com/invite_picture@2x.png",
+            "text": "猪年大吉，金猪送福，抽签抢苹果笔记本电脑，抽中即送，公开透明，祝你好运！"
+          }
         },
         "rule": {
-            "zero_picture": "",
-            "common_picture": "",
-            
+          "zero_picture": "http://qnimage.xiteng.com/%E8%A7%84%E5%88%99-%E6%8A%BD%E7%AD%BE%E6%8A%A2.jpg",
+          "common_picture": "http://qnimage.xiteng.com/%E5%96%9C%E8%85%BE%E6%8A%A2%E8%B4%AD%E6%B4%BB%E5%8A%A8%E8%A7%84%E5%88%99.jpg",
         },
         "awards": {
-            "picture": "",
-            
+          "picture": "http://qnimage.xiteng.com/photo_xiangqing@2x%281%29.jpg",
         },
         "home_activity_big_picture": "http://qnimage.xiteng.com/%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%A6%96%E9%A1%B5.jpg"
-    }
+      }
 
     res.send(info);
 }
