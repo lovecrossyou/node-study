@@ -9,18 +9,18 @@
 exports.activityInfo = function (req, res) {
     const info =  {
       "invite_group": {
-          "picture": "http://qnimage.xiteng.com/%E9%82%80%E8%AF%B7%E9%93%BE%E6%8E%A5@2x.png",
+          "picture": "http://qnimage.xiteng.com/invite_linkk@2x.png",
           "text": "猪年大吉，金猪送福，参加3D抢购！中签即送，立即抢！"
       },
       "me_invite_friend": {
           "input_text": "猪年大吉，金猪送福，一起来参加3D抢购！中签即送，公开透明，立即抢！",
-          "picture": "http://qnimage.xiteng.com/%E6%88%91%E9%82%80%E8%AF%B7%E5%A5%BD%E5%8F%8B@2x.png",
+          "picture": "http://qnimage.xiteng.com/me_fri@2x.png",
           "invite_link": {
-              "picture": "http://qnimage.xiteng.com/%E9%82%80%E8%AF%B7%E9%93%BE%E6%8E%A5@2x.png",
+              "picture": "http://qnimage.xiteng.com/invite_linkk@2x.png",
               "text": "猪年大吉，金猪送福，参加3D抢购！中签即送，立即抢！"
           },
           "invite_info": {
-              "picture": "http://qnimage.xiteng.com/%E9%82%80%E8%AF%B7%E7%94%9F%E6%88%90%E5%9B%BE-%E8%8D%A3%E8%80%80@2x.png",
+              "picture": "http://qnimage.xiteng.com/invite@2x.png",
               "text": "猪年大吉，金猪送福，一起来参加3D抢购！中签即送，公开透明，立即抢！"
           }
       },
