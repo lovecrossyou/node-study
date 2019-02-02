@@ -34,7 +34,8 @@ exports.activityInfo = function (req, res) {
         "home_activity_big_picture": "http://qnimage.xiteng.com/%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%A6%96%E9%A1%B5.jpg",
         "zerobg": "http://qnimage.xiteng.com/photo_bg_chouqian@2x.png",
         "threed_spectial": "http://qnimage.xiteng.com/icon_3Drexia@2x.png",
-        "threed_header": "http://qnimage.xiteng.com/icon_3D_qianggo@2x.png"
+        "threed_header": "http://qnimage.xiteng.com/icon_3D_qianggo@2x.png",
+        "banner":"http://qnimage.xiteng.com/banner.jpg"
     }
 
     res.send(info);
