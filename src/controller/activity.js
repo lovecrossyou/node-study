@@ -35,7 +35,7 @@ exports.activityInfo = function (req, res) {
         "zerobg": "http://qnimage.xiteng.com/photo_bg_chouqian@2x.png",
         "threed_spectial": "http://qnimage.xiteng.com/icon_3Drexia@2x.png",
         "threed_header": "http://qnimage.xiteng.com/icon_3D_qianggo@2x.png",
-        "banner":"http://qnimage.xiteng.com/banner.jpg"
+        "banner":"http://qnimage.xiteng.com/banner%281%29.jpg"
     }
 
     res.send(info);
