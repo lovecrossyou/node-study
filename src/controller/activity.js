@@ -9,14 +9,14 @@
 exports.activityInfo = function (req, res) {
     const info =  {
         "invite_group": {
-            "picture": "http://qnimage.xiteng.com/image_invite_link_car@2x.png",
+            "picture": "http://qnimage.xiteng.com/image_invite_link_ca1r@2x.png",
             "text": "猪年大吉，金猪送福，抽签抢汽车，抽中即送，立即抢！"
         },
         "me_invite_friend": {
             "input_text": "猪年大吉，金猪送福，抽签抢汽车，帕萨特一辆，抽中即送，公开透明，立即抢！",
-            "picture": "http://qnimage.xiteng.com/image_me_invite.png",
+            "picture": "http://qnimage.xiteng.com/image_me_invite1.png",
             "invite_link": {
-                "picture": "http://qnimage.xiteng.com/image_invite_link_car@2x.png",
+                "picture": "http://qnimage.xiteng.com/image_invite_link_ca1r@2x.png",
                 "text": "猪年大吉，金猪送福，抽签抢汽车，抽中即送，立即抢！"
             },
             "invite_info": {
