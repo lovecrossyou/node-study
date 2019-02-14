@@ -17,6 +17,18 @@ app.use('/xitenggamenode', express.static(__dirname + "/views/"));
 app.use('/xitenggamejar', proxys);
 app.use('/xitenggamenode',routers)
 
+
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:9934');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    res.header('Access-Control-Allow-Credentials','true');
+    next();
+};
+app.use(allowCrossDomain);
+
+
+
 var server = http.createServer(app).listen(9934, function () {
     var host = server.address().address;
     var port = server.address().port;
