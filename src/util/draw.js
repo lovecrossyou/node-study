@@ -33,9 +33,6 @@ const startDraw = async (req,res) => {
 
     //请求活动参数数据
     const activeInfo = await axios.get('https://www.xiteng.com/xitenggamenode/activityInfo').then(res=>res.data);
-
-    console.log('activeInfo ## ',activeInfo);
-
     let desStr = activeInfo.invite_group.text
 
     // if (des){
