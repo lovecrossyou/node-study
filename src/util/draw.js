@@ -1,7 +1,7 @@
 const { createCanvas,Image,loadImage,registerFont } = require('canvas')
 const BASE64  = require('./base64')
 const queryString = require('querystring') ;
-
+const axios = require('axios')
 
 const width_canvas = 668;
 const height_canvas = 960;
@@ -30,7 +30,15 @@ const startDraw = async (req,res) => {
         let nameStr = BASE64.decode(userName).replace(/\ +/g,"").replace(/[\r\n]/g,"");
         drawName(ctx, nameStr||'');
     }
-    let desStr = '猪年大吉，金猪送福，抽签抢汽车，帕萨特一辆，抽中即送，公开透明，立即抢！'
+
+    //请求活动参数数据
+    const resActiveInfo = await axios.get('https://www.xiteng.com/xitenggamenode/activityInfo').then(res=>res.data);
+
+    console.log('activeInfo ## ',resActiveInfo.data);
+
+    const activeInfo = resActiveInfo.data ;
+    let desStr = activeInfo.invite_group.text
+
     // if (des){
     //    let desObj =  queryString.parse(des);
     //    let desString = Object.keys(desObj)[0] ;
