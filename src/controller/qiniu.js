@@ -1,4 +1,6 @@
-const url = 'qnimage.xiteng.com' ;
+const qiniuBaseUrl = 'qnimage.xiteng.com' ;
 exports.baseUrl = function (req,res) {
-    res.send(url)
+    res.send(qiniuBaseUrl)
 }
+
+exports.qiniuBaseUrl = qiniuBaseUrl ;
