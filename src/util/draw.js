@@ -28,7 +28,7 @@ const startDraw = async (req,res) => {
     // 创建画布
     const canvas = createCanvas(width_canvas, height_canvas);
     const ctx = canvas.getContext('2d')
-    await DrawImage(ctx,picture,{x:0,y:0,w:width_canvas,h:height_canvas})
+    await DrawImage(ctx,__dirname + '/../assets/share/bg_photo_yaoqing1.png',{x:0,y:0,w:width_canvas,h:height_canvas})
 // drawRoundRect(ctx, 0, 0, width_canvas, height_canvas, 10);
 
     if(userName){
@@ -46,7 +46,7 @@ const startDraw = async (req,res) => {
     //     desStr = desString.replace(/\ +/g,"").replace(/[\r\n]/g,"");
     // }
     drawDes(ctx, desStr, 0);
-    await DrawImage(ctx,__dirname + '/../assets/share/fenxiang_xiaocehngxu.jpg',{x:(width_canvas-520)/2,y:200+desHeight+30,w:520,h:400})
+    await DrawImage(ctx,picture,{x:(width_canvas-520)/2,y:200+desHeight+30,w:520,h:400})
     drawcodeDes(ctx, '新年运势来袭，免费参与抽签抢购！', 0);
     drawcodeDes(ctx, '长按识别小程序，立即加入抢购！', 1);
     if(qrTextPretty){
