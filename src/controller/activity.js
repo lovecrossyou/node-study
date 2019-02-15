@@ -9,27 +9,27 @@
 exports.activityInfo = function (req, res) {
     const info =  {
         "invite_group": {
-            "picture": "http://qnimage.xiteng.com/image_invite_link_ca1r@2x.png",
-            "text": "猪年大吉，金猪送福，抽签抢汽车，抽中即送，立即抢！"
+            "picture": "http://qnimage.xiteng.com/image_invite_link_mac@2x.png",
+            "text": "猪年大吉，金猪送福，抽签抢电脑，100部，抽中即送！"
         },
         "me_invite_friend": {
-            "input_text": "猪年大吉，金猪送福，抽签抢汽车，帕萨特一辆，抽中即送，公开透明，立即抢！",
-            "picture": "http://qnimage.xiteng.com/image_me_invite1.png",
+            "input_text": "猪年大吉，金猪送福，抽签抢苹果笔记本电脑，100部，抽中即送，公开透明，立即抢！",
+            "picture": "http://qnimage.xiteng.com/image_me_invite_mac@2x.png",
             "invite_link": {
-                "picture": "http://qnimage.xiteng.com/image_invite_link_ca1r@2x.png",
-                "text": "猪年大吉，金猪送福，抽签抢汽车，抽中即送，立即抢！"
+                "picture": "http://qnimage.xiteng.com/image_invite_link_mac@2x.png",
+                "text": "猪年大吉，金猪送福，抽签抢电脑，100部，抽中即送！"
             },
             "invite_info": {
-                "picture": "http://qnimage.xiteng.com/image_invite_info@2x.png",
-                "text": "猪年大吉，金猪送福，抽签抢汽车，帕萨特一辆，抽中即送，公开透明，立即抢！"
+                "picture": "http://qnimage.xiteng.com/image_invite_info_mac@2x.png",
+                "text": "猪年大吉，金猪送福，抽签抢苹果笔记本电脑，100部，抽中即送，公开透明，立即抢！"
             }
         },
         "rule": {
-            "zero_picture": "http://qnimage.xiteng.com/index_all_rule.jpg",
-            "common_picture": "http://qnimage.xiteng.com/index_all_rule.jpg"
+            "zero_picture": "http://qnimage.xiteng.com/%E5%96%9C%E8%85%BE%E6%8A%A2%E8%B4%AD%E6%B4%BB%E5%8A%A8%E8%A7%84%E5%88%99.jpg",
+            "common_picture": "http://qnimage.xiteng.com/%E5%96%9C%E8%85%BE%E6%8A%A2%E8%B4%AD%E6%B4%BB%E5%8A%A8%E8%A7%84%E5%88%99.jpg"
         },
         "awards": {
-            "picture": "http://qnimage.xiteng.com/photo_xiangqing@2x.jpg"
+            "picture": "http://qnimage.xiteng.com/photo_xiangqing@2x%281%29.jpg"
         },
         "zerobg": "http://qnimage.xiteng.com/photo_bg_zero_7d@2x.png",
         "home_activity_big_picture": "http://qnimage.xiteng.com/%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%A6%96%E9%A1%B5.jpg",
