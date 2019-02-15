@@ -20,10 +20,15 @@ const startDraw = async (req,res) => {
     }
     const avatarLogo = logo ;
 
+    //请求活动参数数据
+    const activeInfo = await axios.get('https://www.xiteng.com/xitenggamenode/activityInfo').then(res=>res.data);
+    const me_invite_friend = activeInfo.me_invite_friend ;
+    const {picture} = me_invite_friend.invite_info ;
+
     // 创建画布
     const canvas = createCanvas(width_canvas, height_canvas);
     const ctx = canvas.getContext('2d')
-    await DrawImage(ctx,__dirname + '/../assets/share/bg_photo_yaoqing1.png',{x:0,y:0,w:width_canvas,h:height_canvas})
+    await DrawImage(ctx,picture,{x:0,y:0,w:width_canvas,h:height_canvas})
 // drawRoundRect(ctx, 0, 0, width_canvas, height_canvas, 10);
 
     if(userName){
@@ -31,8 +36,7 @@ const startDraw = async (req,res) => {
         drawName(ctx, nameStr||'');
     }
 
-    //请求活动参数数据
-    const activeInfo = await axios.get('https://www.xiteng.com/xitenggamenode/activityInfo').then(res=>res.data);
+
     let desStr = activeInfo.invite_group.text
 
     // if (des){
