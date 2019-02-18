@@ -39,6 +39,7 @@ app.use('/xitenggamenode',routers)
 var multipartMiddleware = multipart();
 
 app.post('/post',multipartMiddleware,function(req,res){
+    console.log('req files',req.files);
     const file = req.files.file ;
     upload(file).then(d=>{
         res.status(200).send({
