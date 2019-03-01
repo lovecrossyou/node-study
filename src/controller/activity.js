@@ -36,7 +36,7 @@ exports.activityInfo = function (req, res) {
         "threed_spectial": "http://qnimage.xiteng.com/icon_3Drexia@2x.png",
         "threed_header": "http://qnimage.xiteng.com/icon_3D_qianggo@2x.png",
         "banner": "http://qnimage.xiteng.com/banner_002.jpg",
-        "zerolabel": "7D抢"
+        "zerolabel": "抽签抢"
     }
 
     res.send(info);
