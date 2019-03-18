@@ -9,30 +9,32 @@
 exports.activityInfo = function (req, res) {
     const info =  {
         "invite_group": {
-            "picture": "http://qnimage.xiteng.com/image_invite_link_gold@2x.png",
-            "text": "猪年大吉，金猪送福，抽签抢金条，100g，抽中即送！"
+            "picture": "http://qnimage.xiteng.com/invite_linkk@2x.png",
+            "text": "猪年大吉，金猪送福，抽签抢手机，100部，抽中即送！"
         },
         "me_invite_friend": {
-            "input_text": "猪年大吉，金猪送福，抽签抢金条，100g，抽中即送，公开透明，立即抢！",
-            "picture": "http://qnimage.xiteng.com/image_me_invite_gold@2x.png",
+            "input_text": "猪年大吉，金猪送福，抽签抢手机，100部，抽中即送，公开透明，立即抢！",
+            "picture": "http://qnimage.xiteng.com/me_fri@2x.png",
             "invite_link": {
-                "picture": "http://qnimage.xiteng.com/image_invite_link_gold@2x.png",
-                "text": "猪年大吉，金猪送福，抽签抢金条，100g，抽中即送！"
+                "picture": "http://qnimage.xiteng.com/invite_linkk@2x.png",
+                "text": "猪年大吉，金猪送福，抽签抢手机，100部，抽中即送！"
             },
             "invite_info": {
-                "picture": "http://qnimage.xiteng.com/image_invite_info_gold@2x.png",
-                "text": "猪年大吉，金猪送福，抽签抢金条，100g，抽中即送，公开透明，立即抢！"
+                "picture": "http://qnimage.xiteng.com/invite@2x.png",
+                "text": "猪年大吉，金猪送福，抽签抢手机，100部，抽中即送，公开透明，立即抢！"
             }
         },
         "rule": {
-            "zero_picture": "http://qnimage.xiteng.com/image_rule.jpg",
-            "common_picture": "http://qnimage.xiteng.com/image_rule.jpg"
+            "zero_picture": "http://qnimage.xiteng.com/image_rule_v20.jpg",
+            "common_picture": "http://qnimage.xiteng.com/image_rule_v20.jpg",
+            
         },
         "awards": {
-            "picture": "http://qnimage.xiteng.com/image_reward.jpg"
+            "picture": "http://qnimage.xiteng.com/image_reward_xiangqing.jpg",
+            
         },
-        "zerobg": "http://qnimage.xiteng.com/photo_bg_chouqian2@2x.png",
-        "home_activity_big_picture": "http://qnimage.xiteng.com/%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E9%A6%96%E9%A1%B5.jpg",
+        "home_activity_big_picture": "http://qnimage.xiteng.com/picture_home_0.jpg",
+        "zerobg": "http://qnimage.xiteng.com/photo_bg_chouqian@2x.png",
         "threed_spectial": "http://qnimage.xiteng.com/icon_3Drexia@2x.png",
         "threed_header": "http://qnimage.xiteng.com/icon_3D_qianggo@2x.png",
         "banner": "http://qnimage.xiteng.com/banner_002.jpg",
