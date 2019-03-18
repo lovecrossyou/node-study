@@ -34,7 +34,7 @@ exports.activityInfo = function (req, res) {
             
         },
         "home_activity_big_picture": "http://qnimage.xiteng.com/picture_home_0.jpg",
-        "zerobg": "http://qnimage.xiteng.com/photo_bg_chouqian@2x.png",
+        "zerobg": "http://qnimage.xiteng.com/photo_bg_chouqian2@2x.png",
         "threed_spectial": "http://qnimage.xiteng.com/icon_3Drexia@2x.png",
         "threed_header": "http://qnimage.xiteng.com/icon_3D_qianggo@2x.png",
         "banner": "http://qnimage.xiteng.com/banner_002.jpg",
