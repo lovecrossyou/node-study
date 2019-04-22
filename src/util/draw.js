@@ -4,7 +4,7 @@ const queryString = require('querystring') ;
 const axios = require('axios')
 
 const width_canvas = 668;
-const height_canvas = 960;
+const height_canvas = 960 +235;
 const space_shade = 30;
 var desHeight = 100;
 
@@ -35,7 +35,7 @@ const startDraw = async (req,res) => {
     }
     let desStr = activeInfo.invite_group.text
     drawDes(ctx, desStr, 0);
-    await DrawImage(ctx,picture,{x:(width_canvas-520)/2,y:200+desHeight+30,w:520,h:460})
+    await DrawImage(ctx,picture,{x:(width_canvas-520)/2,y:200+desHeight+50,w:520,h:400 +235})
     drawcodeDes(ctx, '新年运势来袭，免费参与抽签抢购！', 0);
     drawcodeDes(ctx, '长按识别小程序，立即加入抢购！', 1);
     if(qrTextPretty){
