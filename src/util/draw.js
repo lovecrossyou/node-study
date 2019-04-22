@@ -42,9 +42,6 @@ const startDraw = async (req,res) => {
         await drawQR(ctx,qrTextPretty||'');
     }
     await drawZeroImg(ctx, '');
-    // if(avatarLogo){
-    //     await drawAvatar(ctx,avatarLogo);
-    // }
     await drawAvatar(ctx, avatarLogo);
 
     const stream = canvas.createPNGStream()
@@ -56,7 +53,6 @@ const DrawImage = async (ctx,path,react)=>{
     ctx.drawImage(myimg, react.x, react.y, react.w, react.h);
 }
 const drawAvatar = async (ctx, icon) => {
-    // await loadImage(path);
     const icon_xt = __dirname + '/../assets/logo_xiteng.png'
     const myimg = await loadImage(icon_xt);
     ctx.beginPath();
