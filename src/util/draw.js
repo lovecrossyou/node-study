@@ -60,10 +60,10 @@ const drawAvatar = async (ctx, icon) => {
     const icon_xt = __dirname + '/../assets/logo_xiteng.png'
     const myimg = await loadImage(icon_xt);
     ctx.beginPath();
-    ctx.arc(space_shade+80, space_shade+80+235, 40, 0, 2 * Math.PI);
+    ctx.arc(space_shade+80, space_shade+80, 40, 0, 2 * Math.PI);
     ctx.closePath();
     ctx.clip();
-    ctx.drawImage(myimg, space_shade+40, space_shade+235+40, 80, 80);
+    ctx.drawImage(myimg, space_shade+40, space_shade+40, 80, 80);
     ctx.restore()
 }
 
