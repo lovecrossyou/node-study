@@ -116,7 +116,7 @@ const drawcodeDes = (ctx, des, index) => {
     ctx.fillText(text, (width_canvas - 520) / 2, 760+235 + 40 * index)
 }
 const drawQR = async (ctx, qrText) => {
-    await DrawImage(ctx,qrText,{x:460,y:705,w:125,h:125})
+    await DrawImage(ctx,qrText,{x:460,y:705+235,w:125,h:125})
     await DrawImage(ctx,__dirname + '/../assets/share/logo_fenxiang_qianggou.png',{x:460+(125-35)/2,y:705+(125-35)/2+235,w:35,h:35})
 }
 
