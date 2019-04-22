@@ -20,7 +20,7 @@ exports.activityInfo = function (req, res) {
                 "text": "猪年大吉，金猪送福，抽签抢手机，100部，抽中即送！"
             },
             "invite_info": {
-                "picture": "http://qnimage.xiteng.com/invite@2x.png",
+                "picture": "http://qnimage.xiteng.com/yaoqing_bg.png",
                 "text": "猪年大吉，金猪送福，抽签抢手机，100部，抽中即送，公开透明，立即抢！"
             }
         },

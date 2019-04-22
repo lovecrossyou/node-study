@@ -29,22 +29,11 @@ const startDraw = async (req,res) => {
     const canvas = createCanvas(width_canvas, height_canvas);
     const ctx = canvas.getContext('2d')
     await DrawImage(ctx,__dirname + '/../assets/share/bg_photo_yaoqing1.png',{x:0,y:0,w:width_canvas,h:height_canvas})
-// drawRoundRect(ctx, 0, 0, width_canvas, height_canvas, 10);
-
     if(userName){
         let nameStr = BASE64.decode(userName).replace(/\ +/g,"").replace(/[\r\n]/g,"");
         drawName(ctx, nameStr||'');
     }
-
-
     let desStr = activeInfo.invite_group.text
-
-    // if (des){
-    //    let desObj =  queryString.parse(des);
-    //    let desString = Object.keys(desObj)[0] ;
-    //     // 去除空格  和 回车换行
-    //     desStr = desString.replace(/\ +/g,"").replace(/[\r\n]/g,"");
-    // }
     drawDes(ctx, desStr, 0);
     await DrawImage(ctx,picture,{x:(width_canvas-520)/2,y:200+desHeight+30,w:520,h:400})
     drawcodeDes(ctx, '新年运势来袭，免费参与抽签抢购！', 0);
