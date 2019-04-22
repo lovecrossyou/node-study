@@ -121,7 +121,7 @@ const drawQR = async (ctx, qrText) => {
 }
 
 const drawZeroImg = async (ctx, jinli) => {
-    await DrawImage(ctx,__dirname + '/../assets/share/logo_fenxiang_qianggou1.png',{x:(width_canvas - 159) / 2,y:865,w:159,h:43})
+    await DrawImage(ctx,__dirname + '/../assets/share/logo_fenxiang_qianggou1.png',{x:(width_canvas - 159) / 2,y:865+235,w:159,h:43})
 }
 const drawRoundRect =(cxt, x, y, width, height, radius)=>{
 
