@@ -113,7 +113,7 @@ const drawcodeDes = (ctx, des, index) => {
     //字体大小,类型
     ctx.fillStyle = "#AE3A35";
     ctx.font = "24px 苹方";
-    ctx.fillText(text, (width_canvas - 520) / 2, 760 + 40 * index)
+    ctx.fillText(text, (width_canvas - 520) / 2, 760+235 + 40 * index)
 }
 const drawQR = async (ctx, qrText) => {
     await DrawImage(ctx,qrText,{x:460,y:705,w:125,h:125})
