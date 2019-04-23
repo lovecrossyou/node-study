@@ -6,22 +6,24 @@
 // 4、奖品详情：中签榜-抽签抢-中签详情-奖品详情：图片
 // 5、首页-抢购规则：图片、抽签抢商品详情规则、图片
 
+const text = '亲,送你2个红包,专享1折抢购!优质名品,全场1折!'
+
 exports.activityInfo = function (req, res) {
     const info =  {
         "invite_group": {
             "picture": "http://qnimage.xiteng.com/invite_linkk@2x.png",
-            "text": "猪年大吉，金猪送福，抽签抢手机，100部，抽中即送！"
+            "text": text
         },
         "me_invite_friend": {
             "input_text": "猪年大吉，金猪送福，抽签抢手机，100部，抽中即送，公开透明，立即抢！",
             "picture": "http://qnimage.xiteng.com/me_fri@2x.png",
             "invite_link": {
                 "picture": "http://qnimage.xiteng.com/invite_linkk@2x.png",
-                "text": "猪年大吉，金猪送福，抽签抢手机，100部，抽中即送！"
+                "text": text
             },
             "invite_info": {
                 "picture": "http://qnimage.xiteng.com/yaoqing_bg.png",
-                "text": "猪年大吉，金猪送福，抽签抢手机，100部，抽中即送，公开透明，立即抢！"
+                "text": text
             }
         },
         "rule": {
